@@ -3,17 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "serve": "vue-cli-service serve --open",
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@element-plus/icons": "^0.0.11",
     "@element-plus/icons-vue": "^1.1.4",
-    "@wangeditor/editor": "^5.0.0",
+    "@wangeditor/editor": "^5.0.1",
+    "@wangeditor/editor-for-react": "^1.0.1",
+    "@wangeditor/editor-for-vue": "^5.1.11",
+    "axios": "^0.26.1",
     "core-js": "^3.8.3",
-    "mitt": "^3.0.0",
+    "element-plus": "^2.1.8",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
-    "vuex": "^4.0.0"
+    "vuex": "^4.0.0",
+    "wangeditor": "^4.7.15"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",
