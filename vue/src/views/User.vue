@@ -20,7 +20,7 @@
 
       <el-table-column fixed="right" label="操作" width="120">
         <template #default="scope">
-          <el-button type="text" size="small" @click="handleEdit(scope.row)">编辑</el-button>
+          <el-button type="text" size="small" @click="handleEdit(scope.row)">&nbsp;&nbsp;&nbsp;编辑</el-button>
           <el-popconfirm title="确认删除吗?" @confirm="handleDelete(scope.row.id)">
             <template #reference>
               <el-button type="text" size="small">删除</el-button>

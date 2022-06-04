@@ -5,11 +5,7 @@
       :default-active="path"
       router
       class="el-menu-vertical-demo">
-    <el-sub-menu index="1">
-      <template #title>系统管理</template>
-        <el-menu-item index="/user">用户管理</el-menu-item>
-    </el-sub-menu>
-    <el-menu-item index="/book">书籍管理</el-menu-item>
+    <el-menu-item index="/user">用户管理</el-menu-item>
     <el-menu-item index="/news">新闻管理</el-menu-item>
   </el-menu>
   </div>

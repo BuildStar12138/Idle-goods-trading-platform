@@ -1,24 +1,25 @@
 <template>
-  <div style="width: 100%;height: 100vh;background-color: green;overflow: hidden">
-    <div style="width: 400px;margin: 150px auto">
-      <div style="color: #cccccc;font-size: 30px;text-align: center;padding: 30px">欢迎注册</div>
-      <el-form :model="form">
+  <div style="width: 100%;height: 100vh;background-color: #bfdcec;overflow: hidden">
+    <div style="width: 400px;margin: 150px auto;background-color: white">
+      <div style="color: #cccccc;font-size: 30px;text-align: center;padding: 30px">闲置物品交易平台</div>
+      <el-form :model="form" style="width: 300px;height: 250px;margin:auto;">
         <el-form-item>
-          <el-input :prefix-icon="Avatar" v-model="form.username"></el-input>
+          <el-input :prefix-icon="Avatar" v-model="form.username" placeholder="  请输入用户名"></el-input>
         </el-form-item>
         <el-form-item>
-          <el-input :prefix-icon="Lock" v-model="form.password" show-password />
+          <el-input :prefix-icon="Lock" v-model="form.password" placeholder="  请输入密码" show-password />
         </el-form-item>
         <el-form-item>
-          <el-input :prefix-icon="Lock" v-model="form.confirm" show-password />
+          <el-input :prefix-icon="Lock" v-model="form.confirm" placeholder="  请再次输入密码" show-password />
         </el-form-item>
         <el-form-item>
-          <el-button style="width: 100%" type="primary" @click="register">注册</el-button>
+          <el-button style="width: 40%;margin: auto" type="primary" @click="register">注册</el-button>
         </el-form-item>
-        <el-form-item>
-          <el-button style="width: 100%" type="primary" @click="login">登录</el-button>
+        <el-form-item style="display: flex">
+          <el-link @click="backstage" style="color: #7faec7">后台登录</el-link>
+          <el-link @click="login" style="color: #7faec7;margin-left: auto">登录</el-link>
         </el-form-item>
-        </el-form>
+      </el-form>
     </div>
   </div>
 </template>
@@ -39,6 +40,9 @@ export default {
   methods:{
     login(){
       this.$router.push("/login")
+    },
+    backstage(){
+      this.$router.push("/backstage")
     },
     register(){
       if(this.form.password != this.form.confirm){
