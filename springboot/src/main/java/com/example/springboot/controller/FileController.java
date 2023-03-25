@@ -29,7 +29,7 @@ public class FileController {
         //定义文件唯一标识
         String s = IdUtil.fastSimpleUUID();
         String path = System.getProperty("user.dir")+"/springboot/src/main/resources/files/"+s+"_"+Filename;//获取当前文件的根路径
-       //获取输入
+        //获取输入
         //System.out.println(System.getProperty("user.dir"));
         byte[] bytes1 = file.getBytes();
         InputStream in = new ByteArrayInputStream(bytes1);
